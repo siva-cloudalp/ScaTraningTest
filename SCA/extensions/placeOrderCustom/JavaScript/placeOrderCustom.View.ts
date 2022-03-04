@@ -193,8 +193,6 @@ getContext: function() {
             this.modelData.push(data.items);
         }         
     });    
-
-    console.log(this.modelData);
     
     // prepare the model for the frontend
     // @class placeOrderCustom.Model.Attributes
