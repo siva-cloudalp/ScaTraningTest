@@ -93,10 +93,9 @@ addToCartAll:function(e){
                 $alert_placeholder.empty();
             });
         }, 6000);
-        alert('succes')
+ 
     })
     .fail(function(jqXhr) {
-        alert("fail")
         jqXhr.preventDefault = true;
         $alert_placeholder.show().empty();
         layout.showXHRErrorMessage($alert_placeholder,jqXhr,true);
@@ -105,7 +104,6 @@ addToCartAll:function(e){
  
 },
  addToCart:function(e){
-    // /api/items?id=6830&fieldset=details
     e.preventDefault();
     const self = this;  
         const line_id = this.$(e.target).data('line-id');
