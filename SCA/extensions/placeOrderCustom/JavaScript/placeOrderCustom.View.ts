@@ -62,17 +62,19 @@ const PlaceOrderCustomView: any = BackboneView.extend({
     },
     addToCartUrl:function(){
 
-//For single item to addto cart  :- '/app/site/backend/additemtocart.nl?c=TSTDRV1521025&buyid=682'
-// for multi items :-  '/app/site/backend/additemtocart.nl?c=TSTDRV1521025&buyid=multi&multi=6880,1;6881,2'
+//step 1:-
+//For single item to addto cart  :- '/app/site/backend/additemtocart.nl?c=TSTDRV1521025&buyid=5992'
+//step 2:-
+// for multi items :-  '/app/site/backend/additemtocart.nl?c=TSTDRV1521025&buyid=multi&multi=6880,1;6881,2' 
+// dynamic url  /app/site/backend/additemtocart.nl?c=${customerId}&buyid=multi&multi=${buyid},${qty}`
 
 
 let customerId ='TSTDRV1521025';
-let buyid=682;
-let qty=2;
-let amount=5;
+let buyid=6894;
+let qty=1;
 let showcart='T';
     let promise =jQuery.Deferred();
-    jQuery.get(`/app/site/backend/additemtocart.nl?c=${customerId}&buyid=${buyid}&qty=${qty}`,(res)=>{promise.resolve()});
+    jQuery.get(`/app/site/backend/additemtocart.nl?c=${customerId}&buyid=multi&multi=${buyid},${qty}`,(res)=>{promise.resolve()});
 
 
     },
