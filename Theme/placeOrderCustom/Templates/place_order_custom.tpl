@@ -5,6 +5,12 @@
       Place order web items
     </h1>
   </div>
+  <div class="place_order_custom_add_to_cart_all-url" data-type="order-items">
+    <button class="place_order_custom_add_to_cart_all_btn" data-action="add-to-cart-using-url">
+      Add To Cart Using Url
+    </button>
+  </div>
+
   {{#if itemsLength}}
   <div class="place_order_custom_add_to_cart_all" data-type="order-items">
     <button class="place_order_custom_add_to_cart_all_btn" data-action="add-to-cart-all">
