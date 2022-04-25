@@ -8,29 +8,33 @@
 */
 
 /// <amd-module name="placeOrderCustom"/>
+import * as _ from 'underscore';
 import * as Utils from '../../../Commons/Utilities/JavaScript/Utils';
 import PlaceOrderCustomView = require('./placeOrderCustom.View');
+import PlaceOrderCustomGetItemsView = require('./placeOrderCustom.GetAllitems.View');
 import { MyAccountMenu } from '../../../Advanced/Header/JavaScript/MyAccountMenu';
 
 const placeOrderCustom:any = {
     mountToApp: function(application) {
-    
+        
     let myAccountMenu = MyAccountMenu.getInstance();
     
         const pageType = application.getComponent('PageType');
         myAccountMenu.addEntry({
-            id:'PlaceOrder',
+            id:'placeorder',
             name: Utils.translate('PlaceOrder'),
+            url:'placeorder',
             index:7
         });
-        
-        myAccountMenu.addSubEntry({
-            entryId:'PlaceOrder',
-            id:'placeorder',
-            name: Utils.translate('Place Order Custom'),
-            url:'placeorder',
-            index:1
-        });
+         
+        // myAccountMenu.addSubEntry({
+        //     entryId:'PlaceOrder',
+        //     id:'placeorder',
+        //     name: Utils.translate('Place Order Custom'),
+        //     url:'placeorder',
+        //     index:1
+        // });
+
        
         pageType.registerPageType({
             name: 'PlaceOrderCustom',
@@ -42,6 +46,11 @@ const placeOrderCustom:any = {
                 
             }
         });
+        // pageType.registerPageType({
+        //     name: 'PlaceOrderCustomgetitem',
+        //     routes: ['placeorder-item'],
+        //      view:PlaceOrderCustomGetItemsView,
+        // });
 
         
 
