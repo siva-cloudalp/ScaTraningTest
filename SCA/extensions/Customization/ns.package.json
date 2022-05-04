@@ -1,0 +1,15 @@
+{
+  "gulp": {
+      "javascript": [
+          "JavaScript/*.js",
+          "JavaScript/*.ts"
+      ]
+     
+  },
+  "overrides":{
+    
+"Commons/Address/JavaScript/Address.Edit.View.ts":"JavaScript/Address.Edit.View.ts",
+"Advanced/LoginRegister/JavaScript/LoginRegister.ts":"JavaScript/LoginRegister.ts"
+
+}
+}

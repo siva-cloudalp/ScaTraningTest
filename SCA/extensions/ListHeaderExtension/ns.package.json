@@ -1,0 +1,14 @@
+{
+  "gulp": {
+      "javascript": [
+          "JavaScript/*.js",
+          "JavaScript/*.ts"
+      ]
+     
+  },
+  "overrides":{
+    
+"Commons/ListHeader/JavaScript/ListHeader.View.ts":"JavaScript/ListHeader.View.ts"
+
+}
+}

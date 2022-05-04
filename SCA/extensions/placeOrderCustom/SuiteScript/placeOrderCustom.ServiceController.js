@@ -38,12 +38,39 @@ define('placeOrderCustom.ServiceController', [
     //           }
     //       };
     //   },
+    // post:function(){
+    //   return placeOrderCustomModel.search(
+    //     {
+    //     page: this.request.getParameter('page') || 1,
+    //     results_per_page:this.request.getParameter('results_per_page') || 2
+    
+    //   },this.data.items)
 
+    // },
       // @method get The call to placeOrderCustom.Service.ss with http method 'get' is managed by this function
       // @return {Array<placeOrderCustom.Model.Attributes>}
+      post:function(){
+        // var getCustData = this.request.getParameter('custdata')
+        // ItemSearchData(this.data);
+        var getCustData = this.data;
+        return placeOrderCustomModel.ItemSearchData(this.data);
+      },
       get:function() {
           // Call the search function defined on ssp_libraries/models/placeOrderCustom.js and send the response
-          return placeOrderCustomModel.search();
+          const perPageValue = this.request.getParameter('ShowperPage'); 
+          
+          console.warn("order custom ",this.request.getParameter('order'))
+          return placeOrderCustomModel.search({
+            page: this.request.getParameter('page') || 1,
+            results_per_page:this.request.getParameter('results_per_page') ||20,
+            ShowperPage:parseInt(perPageValue),
+            sort:this.request.getParameter('sort'),
+            order: this.request.getParameter('order'),
+            search: this.request.getParameter('search')
+            
+       
+        
+          });
       }
   });
 });

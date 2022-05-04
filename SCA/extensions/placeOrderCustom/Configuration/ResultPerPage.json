@@ -1,0 +1,62 @@
+{
+	"type": "object",
+
+	"subtab":{
+		"id":"showResultPerPage",
+		"group":"myAccountApp",
+		"title":"Show Result Per Page",
+		"description":"Show result per page"
+	
+	},
+    "properties": {
+        "showresultsPerPage": {
+            "group": "myAccountApp",
+            "subtab": "showResultPerPage",
+            "type": "array",
+            "title": "Show Results Per Page",
+            "description": "Available options for the Results per Page dropdown",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "items": {
+                        "type": "integer",
+                        "title": "items",
+                        "description": "Amount of items for this result option",
+                        "mandatory": true
+                    },
+                    "name": {
+                        "type": "string",
+                        "title": "Name",
+                        "description": "Label to use in the UI to reference this sort option.",
+                        "translate": true,
+                        "mandatory": true
+                    },
+                    "isDefault": {
+                        "type": "boolean",
+                        "title": "Is default",
+                        "description": "Is default ? "
+                    }
+                }
+            },
+
+            "default":[
+                {
+                    "items":2,
+                    "name": "$(0) per page",
+										"isDefault": true
+                },
+                {
+                    "items":5,
+                    "name": "$(0) per page"
+                },
+                {
+                    "items":10,
+                    "name": "$(0) per page"
+                }
+            ]
+
+        }
+
+    }
+
+}

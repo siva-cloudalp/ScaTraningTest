@@ -1,0 +1,17 @@
+{
+    "gulp": {
+        "javascript": [
+            "JavaScript/*"
+        ],
+        "templates": [
+            "Templates/*"
+        ],
+        "images": [
+            "Images/*"
+        ]
+    },
+    "overrides":{
+        "Advanced/OrderWizard/JavaScript/OrderWizard.Step.ts":"JavaScript/OrderWizard.Step.ts"
+         
+    }
+}
